@@ -19,7 +19,7 @@ const {
   createEmptyFile,
   copyFile,
 } = require('./middleware');
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 8443;
 
 // const key = readFileSync('./certificates/wopi-key.pem')
 // const cert = readFileSync('./certificates/wopi-cert.pem')
@@ -40,7 +40,9 @@ app.get('/fileNames', getFileNames);
 app.get('/discovery', getDiscoveryInfo);
 app.get('/', (req, res, next) => {
   // res.sendFile(join(__dirname, 'SampleHostPage.html'))
-  res.sendFile(join(__dirname, 'index.html'));
+  var htmlContent = fs.readFileSync("index.html");
+  const $ = cheerio.load(htmlContent);
+  res.send($.html());
 });
 
 app.get('/index', (req, res) => {

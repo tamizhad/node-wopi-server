@@ -66,7 +66,7 @@
                             </v-col>
                             <v-col cols="6">
                               <v-btn-toggle>
-                                <template v-for="action in actions[file.ext]" v-if="action[0] !== 'editnew'">
+                                <template v-for="action in actions[file.ext]" v-if="action[0] !== 'editnew' && action[0] != 'open'">
                                   <v-btn @click="submitForm(`office_form_${action[0]}_${file.name}`)">
                                     {{action[0]}}
                                   </v-btn>
