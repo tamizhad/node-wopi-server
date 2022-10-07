@@ -1,0 +1,25 @@
+{
+  "name": "wopi-server",
+  "version": "0.0.1",
+  "description": "A sample WOPI Server written with JavaScript/Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "WOPI"
+  ],
+  "author": "Michael Bowen",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "utf7": "^1.0.2",
+    "valid-filename": "^3.1.0",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0"
+  }
+}
